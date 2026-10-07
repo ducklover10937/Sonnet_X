@@ -3,8 +3,7 @@ from nicegui import ui
 ui.query('body').classes('bg-yellow-50')
 
 with ui.element("div") as home:
-    ui.label("Holy Sonnet X").classes("text-2xl font-bold")
-    ui.label("by John Donne").classes("text-2xl font-bold")
+    ui.label("Holy Sonnet X by John Donne").classes("text-2xl font-bold")
     ui.label("Choose your settings in 'Profile Settings' before clicking 'Start'")
 
 saved_name = ""
