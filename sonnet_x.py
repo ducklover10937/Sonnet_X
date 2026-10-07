@@ -1,4 +1,5 @@
 from nicegui import ui
+import os
 
 ui.query('body').classes('bg-yellow-50')
 
