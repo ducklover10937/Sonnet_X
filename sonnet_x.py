@@ -57,7 +57,7 @@ with ui.row():
     start_button = ui.button("Start", on_click=start)
     settings_button = ui.button("Profile Settings", on_click=openSettings)
 
-with ui.element("div") as video:
+with ui.element("div").classes("w-full flex justify-center") as video:
     video_player = ui.video("video.mp4").classes("w-200")
     video_player.on("ended", vidFinish)
 
