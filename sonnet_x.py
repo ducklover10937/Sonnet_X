@@ -17,13 +17,13 @@ def selectCharacter(character, image):
     selected_image = image
     ui.notify(f"Selected: {character}")
 
-def save_profile():
+def saveProfile():
     global saved_name
     saved_name = name.value
     settings.close()
     ui.notify("Profile Saved!")
 
-def open_settings():
+def openSettings():
     name.value = saved_name
     settings.open()
 
@@ -52,11 +52,11 @@ with ui.dialog() as settings:
             
             ui.image("ribbon.png").classes("w-20 h-20 cursor-pointer").on("click", lambda: selectCharacter("Duck with Ribbon", "ribbon.png"))
        
-        ui.button("Save", on_click=save_profile)
+        ui.button("Save", on_click=saveProfile)
 
 with ui.row():
     start_button = ui.button("Start", on_click=start)
-    settings_button = ui.button("Profile Settings", on_click=open_settings)
+    settings_button = ui.button("Profile Settings", on_click=openSettings)
 
 with ui.element("div") as video:
     video_player = ui.video("video.mp4").classes("w-200")
