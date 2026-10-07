@@ -69,4 +69,4 @@ with ui.element("div").classes("w-full flex flex-col items-center") as congratul
 
 video.set_visibility(False)
 
-ui.run()
+ui.run(host='0.0.0.0', port=int(os.environ.get('PORT', 10000)))
